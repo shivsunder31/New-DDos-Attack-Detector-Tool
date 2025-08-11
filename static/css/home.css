@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url(./font);
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+background-color: #020202;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+   
+    position: relative;
+    padding-top: 1px;
+}
+#nav{
+    height: 12vh;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 40px;
+    border-top: 2px solid #149414;
+    border-bottom: 2px solid #149414;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#nav h1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #149414;
+    /* background-color: blue; */
+    font-family: 'Monument';
+    font-size: 5vw;
+    letter-spacing: -1px;
+    position: relative;
+   
+}
+
+
+
+
+
+#center{
+    height: 90%;
+    width: 100%;
+    /* background-color: blue; */
+    position : relative;
+    padding: 4vw;
+}
+
+#content{
+    height: 100%;
+    width: 100%;
+    position:relative;
+    /* background-color: red; */
+}
+
+#content video{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#overlay{
+    height:52%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* background-color: red; */
+    padding: 3vw;
+    color: #149414;
+}
+#over1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+}
+#over1 h1{
+    font-size: 3.6vw;
+    font-family: 'Monument';
+}
+#over1 h2{
+    font-size: 1vw;
+    padding: 2vw 2.2vw;
+    /* background-color: blue; */
+    border-radius: 50%;
+    border: 1px solid #149414;
+}
+
+#over2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #149414;
+    padding: 1.5vw 0;
+}
+
+#over2 h4{
+    font-size: 1.3vw;
+    font-weight: 500; 
+}
+
+#over2 img{
+    height: 3vw;
+}
+
+
+
+#page2{
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+   padding: 2vw 5vw;
+}
+
+#page2-part1{
+    height: 100%;
+    width: 50%;
+}
+#page2-part1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page2-part1 h1{
+    font-size: 2.3vw;
+    font-family: 'Monument';
+    padding: 2.5vh;
+    color: #149414;
+}    
+#page2-part2{
+    height: 100%;
+    width: 46%;
+    /* background-color: red; */
+}
+#page2-part2 img{
+    border-radius: 7%;
+    width: 100%;
+    object-fit: cover;
+    height: 70%;
+}
+
+#sidetext{
+   display: flex;
+   justify-content: space-between;
+   padding: 2.2vh;
+   gap: 2vw;
+}
+
+#sidetext h5{
+    font-size: 3.4rem;
+    font-weight: 550;
+    color: #149414;
+}
+
+#sidetext p {
+    font-size: 1.8vw;
+    font-weight: 500;
+    color: #149414;
+}
+#page3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+   /* background-color: red; */
+  }
+ #rightimg{
+    height: 100%;
+    width: 50%;
+    padding: 3vw;
+    margin-right: 5vw;
+    /* background-color: blue; */
+ } 
+
+ #rightimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ #leftpart{
+    height: 80%;
+    width: 50%;
+    margin-top: 15%;
+    /* background-color: red; */
+    
+ }
+
+ #leftpart img{
+    height: 50%;
+    width: 50%;
+    margin-left: 5vw;
+    object-fit: cover;
+    /* background-color: blue; */
+    border-radius: 50%;
+ }
+
+#leftpart h4{
+    font-size: 2.4vw;
+    font-weight: 600;
+    padding: 7vw;
+    color: #149414;
+   
+}
+
+#page4{
+    height: 100%;
+    width: 100%;
+   /* background-color: blue; */
+}
+
+#page4 img{
+    border-radius: 7%;
+    height: 83%;
+    width: 100%;
+padding: 2vw 6vw;
+    object-fit: cover;
+}
+#page4 h4{
+    font-size: 1.5vw;
+    font-weight: 600;
+    padding-left: 6vw;
+    color: #149414;
+}
+
+#page5{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 5vw 4vw;
+}
+
+#page5>h1{
+    color: #149414;
+      text-align: center;
+      font-family: 'Monument';
+      text-transform: uppercase;
+      font-size: 3vw;
+      font-weight: 900; 
+      margin-bottom: 10vh;
+}
+
+.elem{
+    height: 15.5vh;
+    width: 100%;
+    /* background-color: red; */
+    border-top: 2px solid #149414;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    position: relative;
+    transition: all ease 0.7s;
+}
+.elem img{
+    height: 140px;
+    width: 150px;
+    position: absolute;
+    border-radius: 50%;
+    left: 12%;
+    opacity: 0;
+    transition: all ease 0.7s;
+    object-fit: cover;
+    object-position: top;
+    transition: all ease 0.7s;
+}
+.elem h4{
+    color: #149414;
+    font-size: 1.1vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-weight: 600;
+    }
+ .elem .elem-part2{
+    width: 45%;
+ }
+ 
+ .elem h1{
+    color: #149414;
+    font-size: 2.7vw;
+    font-weight: 600;
+ }
+ .elem h5{
+    font-size: 0.8vw;
+    font-weight: 600;
+ }
+.elem:nth-last-child(1){
+     border-bottom: 2px solid #000;
+}
+.elem:nth-last-child(1) img{
+    left: 40%;
+}
+.elem:nth-last-child(3) img{
+    left: 40%;
+}
+.elem:hover{
+    background-color: #334f33;
+}
+.elem:hover img{
+    opacity: 1;
+    left: 24%;
+    width: 15vw;
+    height: 15vw;
+    position:absolute;
+   
+} 
+#marque{
+    /* height: 20vh; */
+    width: 100%;
+    padding: 0.8vw;
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-top: 3px solid #149414;
+    border-bottom: 3px solid #149414;
+}
+#marque h1{
+    display: inline-block;
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    -webkit-text-stroke: 2px #149414;
+    color: transparent;
+    letter-spacing: 3px;
+    font-family: 'Monument';
+    margin-right: 16px;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+@keyframes move {
+    from
+    {
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+    
+}
+#page6{
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+   padding: 2vw 5vw;
+}
+#page6-part1{
+    display: flex;
+    height: 100%;
+    width: 55%;
+}
+#page6-part1 img{
+    border-radius: 7%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+  #page6-part2{
+    height: 100%;
+    width: 42%;
+    }
+
+    #page6-part2 h1{
+        font-size: 3vw;
+        text-transform: uppercase;
+        font-family: 'Monument';
+        padding: 3vh;
+        color: #149414;
+    }
+    #page6-part2 h5{
+    padding: 1.8vw 2vw 2vw 1.4vw ;
+        font-size: 1.3vw;
+        font-weight: 500;
+        color: #149414;
+    }   
+    
+#page6-part2 .img{
+    
+    height: 100%;
+    width: 70%;
+    /* background-color: black; */
+   display: flex;
+  
+  gap: 2vw;
+   justify-content: space-between;
+}
+#page6-part2 img{
+    border-radius: 7%;
+   height: 19vw;
+    width: 19vw;
+}
+#image-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 2vw 4vw;
+    border-bottom: 2px solid #149414;
+}
+
+#image-section img {
+    width: 17.4%; /* Adjust the width as needed */
+   
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#image-section img:hover {
+    opacity: 0.8;
+}
+
+#page7{
+    height: 100%;
+    width: 100%;
+   /* background-color: blue; */
+}
+
+#page7 img{
+    height: 100%;
+    width: 100%;
+padding: 2vw 6vw;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+#button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+    margin-top: 40px;
+    padding: 30px 40px;
+    font-size: 1.2rem;
+    background-color: #149414;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0e751c;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Detector API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <!-- Add this line to your head section -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="../static/css/index.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000000;
+        }
+
+        .left-section {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .left-section img {
+            margin-left: 3vw;
+            max-width: 100%;
+            height: 35vw;
+            border-radius: 8px;
+        }
+
+        .left-section p {
+            color: #149414;
+            padding: 3vw;
+            font-size: 1.5vw;
+            margin-left: 4vw;
+        }
+
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .login {
+        
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login h1 {
+            font-family: 'Pacifico', cursive;
+            color: #149414;
+            margin-bottom: 20px; 
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+         
+        }
+
+        form input {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #149414;
+            border-radius: 4px;
+            color: #149414;
+        }
+        form input[type="text"] {
+          color: #149414; 
+      }
+      .login p {
+        color: #149414; 
+    }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left-section">
+        <img src="https://t3.ftcdn.net/jpg/02/01/21/18/360_F_201211820_Yf9jBT8yaLyYuOrHOItHHHinf07hYZzw.jpg" alt="Your Image">
+        <p>DDoS detection is accomplished by a process that receives flow data from NetFlow, J-Flow, sFlow, and IPFIX-enabled routers and switches, then analyzes that flow data to detect attacks</p>
+    </div>
+
+    <div class="right-section">
+        <div class="login">
+            <h1>DDOS PREDICTION</h1>
+            <!-- Main Input For Receiving Query to our ML -->
+            <form action="{{ url_for('predict')}}" method="post">
+                <input type="text" name="dt" placeholder="Enter Destination identifier" required="required" />
+                <input type="text" name="switch" placeholder="Enter Network Switch identifier" required="required" />
+                <input type="text" name="pktcount" placeholder="Enter Packet Count" required="required" />
+                <input type="text" name="bytecount" placeholder="Enter Byte Count" required="required" />
+                <input type="text" name="dur" placeholder="Enter Duration" required="required" />
+                <input type="text" name="dur_nsec" placeholder="Enter Duration in Nanoseconds" required="required" />
+                <input type="text" name="tot_dur" placeholder="Enter Total Duration" required="required" />
+                <input type="text" name="flows" placeholder="Enter Number of Flows" required="required" />
+                <input type="text" name="packetins" placeholder="Enter Packet Inspections" required="required" />
+                <input type="text" name="pktperflow" placeholder="Enter Packets per Flow" required="required" />
+                <input type="text" name="byteperflow" placeholder="Enter byteperflow" required="required" />
+                <input type="text" name="pktrate" placeholder="Enter packet rate" required="required" />
+                <input type="text" name="Pairflow" placeholder="Enter Pairflows" required="required" />
+                <input type="text" name="tx_bytes" placeholder="Enter Transmitted Bytes" required="required" />
+                <input type="text" name="rx_bytes" placeholder="Enter Received Bytes" required="required" />
+                <input type="text" name="tx_kbps" placeholder="Enter Transmission Rate in Kilobits per Second" required="required" />
+                <input type="text" name="rx_kbps" placeholder="Enter Reception Rate in Kilobits per Second" required="required" />
+                <input type="text" name="tot_kbps" placeholder="Enter Total Throughput in Kilobits per Second" required="required" />
+
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            <br>
+            <br>
+            {{ prediction_text }}
+        </div>
+    </div>
+</body>
+
+</html>
