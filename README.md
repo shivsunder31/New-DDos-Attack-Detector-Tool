@@ -54,7 +54,7 @@ TCP, ICMP, and UDP protocols all play important roles in detecting Distributed D
    - Monitoring TCP connections and their states can help detect abnormal behavior such as a sudden spike in connection attempts or a large number of connections in the SYN_SENT state (indicating a TCP SYN flood attack).
    - Analyzing TCP header information, such as source IP addresses, destination ports, and flags, can provide insights into potential attack patterns.
 
-2. **ICMP**: (Internet control message protocol)
+2. **ICMP**: (Internet control message protocol )
    - ICMP packets can be used in DDoS attacks, such as ICMP flood attacks or ICMP echo request (ping) floods.
    - Monitoring ICMP traffic volume and analyzing ICMP packet characteristics can help detect abnormal patterns indicative of an ongoing attack.
    - Additionally, monitoring ICMP error messages, such as ICMP Destination Unreachable or ICMP Time Exceeded, can provide insights into potential network issues caused by DDoS attacks.
